@@ -39,7 +39,7 @@ class PDFsquidException extends Exception
      * @param $error
      * @param $error_code
      */
-    public function setError($errors, $error_code)
+    public function setError($error, $error_code)
     {
       $this->errors['error'] = $error;
       $this->errors['error_code'] = $error_code;

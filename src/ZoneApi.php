@@ -15,7 +15,7 @@ class ZoneApi
     /**
      * API client version
      */
-    const CLIENT_VERSION = '0.9.1';
+    const CLIENT_VERSION = '0.9.2';
 
     /**
      * API key
