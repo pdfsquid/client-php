@@ -36,11 +36,13 @@ class PDFsquidException extends Exception
     }
 
     /**
-     * @param $errors
+     * @param $error
+     * @param $error_code
      */
-    public function setError($errors)
+    public function setError($errors, $error_code)
     {
-        $this->errors = $errors;
+      $this->errors['error'] = $error;
+      $this->errors['error_code'] = $error_code;
     }
 
     /**

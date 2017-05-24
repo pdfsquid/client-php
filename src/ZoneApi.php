@@ -15,7 +15,7 @@ class ZoneApi
     /**
      * API client version
      */
-    const CLIENT_VERSION = '0.9.0';
+    const CLIENT_VERSION = '0.9.1';
 
     /**
      * API key
@@ -330,7 +330,7 @@ class ZoneApi
                 try {
                     if ($body) {
                         $errors = json_decode($body, true);
-                        $ex->setError($errors['error'][0]);
+                        $ex->setError(@$errors['error'] ? $errors['error'] : null, @$errors['error_code'] ? $errors['error_code'] : null);
                     }
                 } catch(\Exception $ex) {
 
